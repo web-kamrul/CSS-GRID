@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Column & Rows</title>
+</head>
+    <style>
+        .item {color:white}
+        .item1 {background: #FF6B6B;}
+        .item2 {background: #FFD166;}
+        .item3 {background: #06D6A0;}
+        .item4 {background: #118AB2;}
+        .item5 {background: #F4A261;}
+        .item6 {background: #6D6875;}
+
+
+        .container {
+            width: 700px;
+            margin: 100px;
+            background: #eee;
+            height: 600px;
+
+            /*
+            we can give the column and row number 
+            ------px------auto-------%-----------
+            note: auto will keep All other places
+            */
+            display: grid;
+            grid-template-columns: 200px 100px 200px;
+            grid-template-rows: 100px 200px;
+
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 40% 40% 20%;
+
+            grid-template-columns: 200px auto 200px;
+            grid-template-rows: 20% 80%;
+
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 1fr 2fr 1fr;
+
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+    </style>
+<body>
+    <div class="container">
+            <div class="item item1">item-1</div>
+            <div class="item item2">item-2</div>
+            <div class="item item3">item-3</div>
+            <div class="item item4">item-4</div>
+            <div class="item item5">item-5</div>
+            <div class="item item6">item-6</div>
+        </div>
+    </div>
+</body>
+</html>
